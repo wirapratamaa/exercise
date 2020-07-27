@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PizzaOrder</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <form action="">
+        <div class="row">
+            <!-- MENU -->
+            <h1>Pizza</h1>
+            <div id="pizzaId">
+                <div class="column">
+                        <img src="img/pizza.jpg">
+                        <h2>Pizza1</h2>
+                        <h2>$8</h2>
+                        <input type="radio" name="selectPizza" id="pizza1" value="8" onclick="selectedMenu()"></input>
+                </div>
+                <div class="column">
+                        <img src="img/pizza2.jpg">
+                        <h2>Pizza2</h2>
+                        <h2>$10</h2>
+                        <input type="radio" name="selectPizza" id="pizza2" value="10" onclick="selectedMenu()"></input>                   
+                </div>                    
+                <div class="column">
+                        <img src="img/pizza3.jpg">
+                        <h2>Pizza3</h2>
+                        <h2>$12</h2>
+                        <input type="radio" name="selectPizza" id="pizza3" value="12" onclick="selectedMenu()" ></input>        
+                </div> 
+            </div>
+        </div>
+        <div class="row">
+                <!-- SIZE -->
+                <h1>Size</h1>
+                <div class="size">
+                    <input name="sizes" type="radio" id="size1" value="-1" onclick="selectSize()">
+                    <input name="sizes" type="radio" id="size2" value="0" checked onclick="selectSize()">
+                    <input name="sizes" type="radio" id="size3" value="2" onclick="selectSize()">
+                    <label for="size1">Small</label>
+                    <label for="size1">Medium</label>
+                    <label for="size1">Large</label>   
+                </div>
+
+                <!-- TOPPINGS -->
+                <h1>Toppings</h1>
+                <div class="topings">
+                    <label><input type="checkbox" name="topings" id="topping0" value="1" onclick="toppPrice(this)">Avocado</label>
+                    <label><input type="checkbox" name="topings" id="topping1" value="2" onclick="toppPrice(this)">Lobster</label>
+                    <label><input type="checkbox" name="topings" id="topping2" value="3" onclick="toppPrice(this)">Bacon</label>
+                    <label><input type="checkbox" name="topings" id="topping3" value="1" onclick="toppPrice(this)">Broccoli</label>
+                    <label><input type="checkbox" name="topings" id="topping4" value="2" onclick="toppPrice(this)">Oyster</label>
+                    <label><input type="checkbox" name="topings" id="topping5" value="3" onclick="toppPrice(this)">Duck</label>
+                    <label><input type="checkbox" name="topings" id="topping6" value="1" onclick="toppPrice(this)">Onions</label>
+                    <label><input type="checkbox" name="topings" id="topping7" value="2" onclick="toppPrice(this)">Salmon</label>
+                    <label><input type="checkbox" name="topings" id="topping8" value="3" onclick="toppPrice(this)">Ham</label>
+                    <label><input type="checkbox" name="topings" id="topping9" value="1" onclick="toppPrice(this)">Zucchini</label>
+                    <label><input type="checkbox" name="topings" id="topping10" value="2" onclick="toppPrice(this)">Tuna</label>
+                    <label><input type="checkbox" name="topings" id="topping11" value="3" onclick="toppPrice(this)">Sausage</label>
+                </div>
+        </div>               
+    </form>
+
+    <h1>Price</h1>
+    <p><label>$<a id="priceTotal">0</a></label></p>
+    <script src="pizza.js"></script>
+</body>
+</html>
